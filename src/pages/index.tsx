@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Footer from '../components/footer'
 import styles from '../styles/Home.module.css'
+import {ThemeProvider} from '../components/theme'
+import Change from '../components/theme'
 
 export default function Home() {
   return (
@@ -13,8 +15,11 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">MyApp</a>
+          Welcome to <a href="https://github.com/kazu8901">MyApp</a>
         </h1>
+        <ThemeProvider>
+          <Change />
+        </ThemeProvider>
       </main>
 
       <Footer/>
